@@ -1,3 +1,5 @@
+package lesson02.src;
+
 import java.util.Scanner;
 
 public class Task5CheckNumber {
