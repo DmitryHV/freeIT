@@ -8,8 +8,40 @@ package lesson07;
 // каким количеством купюр какого номинала выдается сумма.
 // Создать конструктор с тремя параметрами – количеством купюр.
 
+import java.util.Scanner;
+
 public class MetodTask25 {
     public static void main(String[] args) {
+
+// создаем банкоматы
+
+        ATM atm1 = new ATM(0,0,0);
+
+        ATM atm2 = new ATM(5,10,15);
+// выводим количество купюр в банкомате по номиналам
+        System.out.println("количество купюр в atm1");
+        atm1.getInfoATM();
+// добавляем деньги в банкомат
+        atm1.addManyToATM(10,10,10);
+// выводим количество купюр в банкомате по номиналам после добавления денег
+        System.out.println("количество купюр в atm1 после добавления (добавили по 10 штук каждого номинала)");
+        atm1.getInfoATM();
+
+        System.out.println("количество купюр в atm2");
+        atm2.getInfoATM();
+        System.out.println("количество купюр в atm2 после добавления (добавили 2, 3 и 5 соответственно)");
+        atm2.addManyToATM(2,3,5);
+        atm2.getInfoATM();
+
+//        atm1.getMoney(5000000);
+//        atm1.getMoney(100);
+
+        System.out.println("Введите сумму:");
+        Scanner scanner = new Scanner(System.in);
+        int sum = scanner.nextInt();
+        atm1.getMoney(sum);
+        atm1.getInfoATM();
+
 
     }
 }
